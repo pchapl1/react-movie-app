@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import NavLayout from './Layouts/NavLayout';
 import HomePage from './Pages/HomePage';
 import MovieLayout from './Layouts/MovieLayout';
+import MovieListPage from './Pages/MovieListPage';
+import MoviePage from './Pages/MoviePage';
+import MovieFormPage from './Pages/MovieFormPage';
 
 const sampleMovies = [
   {
@@ -481,6 +485,16 @@ const App = () => {
 
   const [movieList, setMovieList] = useState(sampleMovies)
 
+  const handleAddMovie = (title) => {
+    // console.log(title)
+    const newMovie = {
+      Title : title,
+    }
+    console.log(newMovie)
+
+    setMovieList([...movieList, newMovie ])
+  }
+
   const router = createBrowserRouter([
     {
     path: "/",
@@ -493,13 +507,27 @@ const App = () => {
           {
           path: "/movies",
           element: <MovieLayout movieList= {movieList}/>,
+          children: [
+            {
+              index: true,
+              element: <MovieListPage movieList={movieList}/>
+            },
+            {
+              path: "/movies/:title",
+              index: true,
+              element: <MoviePage movieList={movieList} />
+            },
+            {
+              path: "/movies/form",
+              index: true,
+              element: <MovieFormPage handleAddMovie={handleAddMovie}/>
+            },
+          ]
           },
-          // {
-          // path: "/contact",
-          // element: <ContactPage />,
-          // },
+
         ],
-      },
+      }
+
     ]);
 	return (
 		<div className="App-header">

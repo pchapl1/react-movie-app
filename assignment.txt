@@ -78,65 +78,65 @@ https://gist.github.com/saniyusuf/406b843afdfb9c6a86e25753fe2761f4
 [x] Add a new state variable movieList that is initialized to sampleMovies.
 Pass movieList as a prop into <MovieLayout/> and <MovieListPage/>.
 In ./src/MovieLayout.js,
-Pass movieList from the props parameter into the <MovieSideBar/> as a prop.
+[x] Pass movieList from the props parameter into the <MovieSideBar/> as a prop.
 In ./src/MovieSideBar.js,
-Map through the movieList prop in the JSX of <MovieSideBar/> below the h2 header and return a <Link> component for every movie in the list. The displayed text of the <Link/> should be the movie title and the to prop should be the calculated path of /movies/{movie title}
-If the above was implemented properly, you should see a screen that looks like Screen Shot 1.
+[x] Map through the movieList prop in the JSX of <MovieSideBar/> below the h2 header and return a <Link> component for every movie in the list. The displayed text of the <Link/> should be the movie title and the to prop should be the calculated path of /movies/{movie title}
+[x] If the above was implemented properly, you should see a screen that looks like Screen Shot 1.
 In ./src/App.css,
-Change the css property justify-content: center; in the .App-header class to be justify-content: flex-start; instead.
+[x] Change the css property justify-content: center; in the .App-header class to be justify-content: flex-start; instead.
 Add css to the .nav-layout, .nav-bar, .movie-layout, .movie-sidebar and .movie-content classes to make the page look like Screen Shot 2.
 The styling does not need to exactly match. The important parts are that:
-nav-layout displays as a flex column
-movie-layout displays as a flex row
-movie-sidebar displays as a flex column
-movie-content takes two thirds of the space in movie-layout and movie-sidebar takes up one third of the space
+[x] nav-layout displays as a flex column
+[x] movie-layout displays as a flex row
+[x] movie-sidebar displays as a flex column
+[x] movie-content takes two thirds of the space in movie-layout and movie-sidebar takes up one third of the space
 Suggestion: Add the following class to see the links more easily
 a { color: white; }
 Building Out the Movie List Page
-Create a new file ./src/Components/MovieCard.js
+[x] Create a new file ./src/Components/MovieCard.js
 In ./src/Components/MovieCard.js,
-Create a basic react component <MovieCard/>.
-Set the class of the enclosing <div>'s to be "movie-list-card"
+[x] Create a basic react component <MovieCard/>.
+[x] Set the class of the enclosing <div>'s to be "movie-list-card"
 In ./src/Pages/MovieListPage,
-Add a new <div> below the h1 header with the class "movie-list"
-Inside the "movie-list" <div>, map through movieList coming from the props in the JSX of <MovieListPage/> and return a <MovieCard/> component for every movie with the movie data passed into <MovieCard/> as a prop.
+[x] Add a new <div> below the h1 header with the class "movie-list"
+[x] Inside the "movie-list" <div>, map through movieList coming from the props in the JSX of <MovieListPage/> and return a <MovieCard/> component for every movie with the movie data passed into <MovieCard/> as a prop.
 In the JSX of <MovieCard/>,
-Display the movie title in an h2 header tag
-Display the movie director in a p tag
+[x] Display the movie title in an h2 header tag
+[x] Display the movie director in a p tag
 In ./src/App.css,
-Add css to movie-list-card that provides a white border, margin and padding to <MovieCard/>.
-Add css to movie-list that sets the maximum height to 80vh and the y-axis overflow to scroll.
-If you implemented the above properly, you should now have a display that looks like Screen Shot 3. The movie list should also be vertically scrollable.
+[x] Add css to movie-list-card that provides a white border, margin and padding to <MovieCard/>.
+[x] Add css to movie-list that sets the maximum height to 80vh and the y-axis overflow to scroll.
+[x] If you implemented the above properly, you should now have a display that looks like Screen Shot 3. The movie list should also be vertically scrollable.
 Creating the Movie Page
-Create a new file ./src/Pages/MoviePage.js
+[x] Create a new file ./src/Pages/MoviePage.js
 In ./src/Pages/MoviePage.js,
-Create a basic react component <MoviePage/>.
-Add an h1 header that says Movie Page in the JSX of <MoviePage/>
+[x] Create a basic react component <MoviePage/>.
+[x] Add an h1 header that says Movie Page in the JSX of <MoviePage/>
 In ./src/App.js,
-Add a new path to the router as a child of "/movies" with the path ":title" and the element of <MoviePage/>. Pass movieList as a prop into <MoviePage/>.
+[x] Add a new path to the router as a child of "/movies" with the path ":title" and the element of <MoviePage/>. Pass movieList as a prop into <MoviePage/>.
 In ./src/Pages/MoviePage.js,
-Get the url title param from the url using the useParams react-router hook.
-Loop through movieList coming from props and find the movie whose Title property matches the title param in the url.
+[x] Get the url title param from the url using the useParams react-router hook.
+[x] Loop through movieList coming from props and find the movie whose Title property matches the title param in the url.
 Hint: Click on one of the links in the movie sidebar, that will render the Movie Page so you can console.log the above code to verify that it's working.
-In the JSX of <MoviePage/>, display the found movie title in an h2 header, and the director, actors and plot in p tags.
+[x] In the JSX of <MoviePage/>, display the found movie title in an h2 header, and the director, actors and plot in p tags.
 If you implemented the above correctly, you should be able to click any one of the links in the movie sidebar, see the url change in the browser address bar and see a display that looks like screenshot 4.
 Creating the Movie Form Page
-Create a new file ./src/Pages/MovieFormPage.js
+[x] Create a new file ./src/Pages/MovieFormPage.js
 In ./src/Pages/MovieFormPage.js,
-Create a basic react component <MovieFormPage/>.
-Add an h1 header that says Movie Form Page in the JSX of <MovieFormPage/>
+[x] Create a basic react component <MovieFormPage/>.
+[x] Add an h1 header that says Movie Form Page in the JSX of <MovieFormPage/>
 In ./src/App.js,
-In the body of <App/> create a new function (above the router) called handleAddMovie that takes in title as its parameter. The function handleAddMovie should create a new movie object using the title parameter and add it to the movieList state variable.
+[x] In the body of <App/> create a new function (above the router) called handleAddMovie that takes in title as its parameter. The function handleAddMovie should create a new movie object using the title parameter and add it to the movieList state variable.
 Note:
 We're only implementing title for now, but one of the stretch goals is to build out the full form.
 Make sure you pay attention to the casing on the currently existing movie objects in sampleMovies and match the case for your new movie object.
-Add a new path to the router as a child of "/movies" with the path "form" and the element of . Pass handleAddMovie as a prop into <MoviePage/>.
+[x] Add a new path to the router as a child of "/movies" with the path "form" and the element of . Pass handleAddMovie as a prop into <MoviePage/>.
 In ./src/Components/NavBar,
-Add a new <Link/> to the JSX of <NavBar/> that links to "/movies/form" with the display text of 'Movie Form'.
+[x] Add a new <Link/> to the JSX of <NavBar/> that links to "/movies/form" with the display text of 'Movie Form'.
 In ./src/Pages/MovieFormPage.js,
-Add a state variable, a <label> and text <input> field to save the title user input.
-Add a button with the display text of 'Add Movie' that calls handleAddMovie with the title passed in as a argument onClick.
-If you implemented the above correctly, you should be able to:
+[x] Add a state variable, a <label> and text <input> field to save the title user input.
+[x] Add a button with the display text of 'Add Movie' that calls handleAddMovie with the title passed in as a argument onClick.
+[x] If you implemented the above correctly, you should be able to:
 Enter a new title into the Movie Form and click Add Movie.
 See the movie appear on both the movies sidebar as well as the movie list page.
 Click on one of the movies sidebar links and see the movie page for your new movie.

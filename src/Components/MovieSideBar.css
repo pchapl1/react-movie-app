@@ -1,0 +1,8 @@
+.movie-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-sidebar a {
+    color: white;
+}
